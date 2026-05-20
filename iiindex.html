@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Raksha - Official User Manual</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* PREMIUM COOL WHITE & PINK THEME (Matching the App) */
+        :root {
+            --bg-pure: #F8F9FB;
+            --surface: #FFFFFF;
+            --primary-pink: #FF4D85;
+            --primary-gradient: linear-gradient(135deg, #FF6B9E, #FF3370);
+            --text-main: #1C1C1E;
+            --text-muted: #8E8E93;
+            --border-light: #E5E5EA;
+            --shadow-soft: 0 10px 30px rgba(255, 77, 133, 0.15);
+            --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.05);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-pure);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* Header Section */
+        .header {
+            background: var(--surface);
+            padding: 40px 20px 30px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: var(--shadow-card);
+            margin-bottom: 30px;
+        }
+
+        .header i {
+            font-size: 50px;
+            color: var(--primary-pink);
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-weight: 700;
+            font-size: 26px;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        /* Download Button */
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--primary-gradient);
+            color: white;
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.2s;
+        }
+
+        .btn-download:active {
+            transform: scale(0.95);
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Cards */
+        .card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-card);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            color: var(--primary-pink);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin: 20px 0 10px;
+            color: var(--text-main);
+        }
+
+        ol, ul {
+            padding-left: 20px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li strong {
+            color: var(--text-main);
+        }
+
+        /* Highlight Boxes */
+        .highlight {
+            background: #F2F2F7;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-pink);
+            font-size: 14px;
+            margin-top: 15px;
+            color: var(--text-main);
+        }
+
+        code {
+            background: #E5E5EA;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--primary-pink);
+            font-weight: 600;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-main);
+            border: 1px solid var(--border-light);
+            transition: background 0.2s;
+            font-weight: 500;
+        }
+
+        .social-link:hover, .social-link:active {
+            background: #F2F2F7;
+        }
+
+        .social-link i {
+            font-size: 24px;
+        }
+
+        .telegram-icon { color: #0088cc; }
+        .insta-icon { color: #E1306C; }
+        .bot-icon { color: var(--text-main); }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <i class="fas fa-shield-heart"></i>
+        <h1>Raksha User Manual</h1>
+        <p>Your ultimate personal safety ecosystem. Setup guide & features.</p>
+        
+        <a href="base.apk" download class="btn-download">
+            <i class="fas fa-download"></i> Download Raksha App
+        </a>
+    </div>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2><i class="fas fa-cogs"></i> 1. Initial Setup: Connecting Your Guardian</h2>
+            <p style="color: var(--text-muted); margin-bottom: 15px;">For Raksha to send background audio, video, and live location during an emergency, it needs to be linked to your guardian's Telegram account.</p>
+            
+            <p><strong>Follow these exact steps to link the app:</strong></p>
+            <ol>
+                <li><strong>Open Telegram on your Guardian's phone</strong> (parents, trusted relatives, or friends).</li>
+                <li><strong>Find their Chat ID:</strong> Search for the bot <code>@userinfobot</code> on Telegram and send the message <code>/start</code>. The bot will reply with an "ID" (a string of numbers). Copy this ID.</li>
+                <li><strong>Start the Raksha Bot:</strong> On your guardian's Telegram, search for our official alert bot: <code>@Raksha_Aryan_Bot</code> and press <code>/start</code>.</li>
+                <li><strong>Configure the App:</strong> Open the Raksha app, tap on <strong>System Preferences</strong> (the gear icon), and enter the following:
+                    <ul>
+                        <li><strong>Display Name:</strong> Your name (so guardians know who is alerting them).</li>
+                        <li><strong>Secure Chat ID:</strong> Paste the ID you copied in Step 2.</li>
+                        <li><strong>Emergency Contact:</strong> Enter your guardian's standard phone number.</li>
+                    </ul>
+                </li>
+                <li><strong>Save Preferences:</strong> Tap the save button. The system will refresh and apply your configuration.</li>
+            </ol>
+            
+            <div class="highlight">
+                <i class="fas fa-exclamation-triangle" style="color: var(--primary-pink);"></i> 
+                <strong>Crucial Step:</strong> Step 3 is mandatory! If your guardian does not press start on the @Raksha_Aryan_Bot, Telegram's privacy settings will block the emergency alerts from reaching them.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-bolt"></i> 2. Core Features Explained</h2>
+            
+            <h3>SOS Emergency</h3>
+            <p style="color: var(--text-muted);">The primary trigger. Pressing this instantly starts recording audio and video from both cameras, fetches your live GPS coordinates, and continuously broadcasts them to the configured Telegram Chat ID.</p>
+
+            <h3>Fake Power Off Mode</h3>
+            <p style="color: var(--text-muted);">Tapping this instantly turns your screen pitch-black, mimicking a dead battery or powered-off phone. Your screen will become unresponsive to normal touches, but background SOS tracking and recording will continue seamlessly.</p>
+            <p style="font-size: 14px; margin-top: 5px;"><strong>How to Exit:</strong> Rapidly tap the black screen <strong>6 times</strong> to unlock it.</p>
+
+            <h3>Guard Mode</h3>
+            <p style="color: var(--text-muted);">When activated, this arms the device's accelerometer. If the phone detects a violent shake or drop, it will automatically trigger the SOS Emergency protocol without requiring a screen tap.</p>
+
+            <h3>Simulate Call</h3>
+            <p style="color: var(--text-muted);">Triggers a highly realistic, interactive fake phone call from the "Police Department." It features a ringing screen, an active call timer, and a scripted voice dialogue from a dispatcher to deter threats.</p>
+
+            <h3>Guardian Angel Network</h3>
+            <p style="color: var(--text-muted);">A community safety feature. If another Raksha user triggers an SOS within a nearby radius, you will receive a silent alert allowing you to navigate to them and help.</p>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-vial"></i> 3. How to Test Your Setup (Dry Run)</h2>
+            <p style="color: var(--text-muted); margin-bottom: 15px;">We highly recommend testing the app to ensure your guardian receives the data correctly.</p>
+            <ol>
+                <li>Inform your guardian that you are conducting a test.</li>
+                <li>Open the app and tap <strong>SOS Emergency</strong>.</li>
+                <li>Let it run for 15-20 seconds to allow the camera and GPS to capture data.</li>
+                <li>Tap the screen 6 times to disarm (if in stealth mode) or close the app.</li>
+                <li>Check your guardian's Telegram (<code>@Raksha_Aryan_Bot</code>) to verify that the location link, battery status, and media files were successfully delivered.</li>
+            </ol>
+        </div>
+
+        <div class="card" style="margin-bottom: 40px;">
+            <h2><i class="fas fa-headset"></i> 4. Support & Community</h2>
+            <p style="color: var(--text-muted);">If you face any issues, need to report a bug, or want to join the community, reach out through our official channels:</p>
+            
+            <div class="social-links">
+                <a href="https://t.me/phantom1729" target="_blank" class="social-link">
+                    <i class="fab fa-telegram telegram-icon"></i>
+                    <div>
+                        <strong>Official Telegram Group</strong>
+                        <div style="font-size: 13px; color: var(--text-muted);">Join the discussion and get real-time updates</div>
+                    </div>
+                </a>
+
+                <a href="https://t.me/Raksha_Aryan_Bot" target="_blank" class="social-link">
+                    <i class="fas fa-robot bot-icon"></i>
+                    <div>
+                        <strong>Raksha Alert Bot</strong>
+                        <div style="font-size: 13px; color: var(--text-muted);">Ensure your guardians are connected here</div>
+                    </div>
+                </a>
+
+                <a href="https://instagram.com/thearyanrakshak" target="_blank" class="social-link">
+                    <i class="fab fa-instagram insta-icon"></i>
+                    <div>
+                        <strong>Developer Contact (Instagram)</strong>
+                        <div style="font-size: 13px; color: var(--text-muted);">For direct support or feedback (@thearyanrakshak)</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
